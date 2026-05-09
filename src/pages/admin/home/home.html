@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+
+<body class="admin-page">
+    <header>
+        <h1>⚙️Panel de Administración</h1>
+        <nav>
+            <ul class="nav-container">
+                <li class="navItem">
+                    <button id="logoutButton">
+                        Cerrar Sesión
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h2>Gestión de productos</h2>
+            <button>+ Nuevo Producto</button>
+            <table border="1" cellspacing="0" class="tabla-productos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos" class="tabla-productos"></tbody>
+            </table>
+        </section>
+        <hr>
+        <section>
+            <form action="#" method="post" class="form-agregarProd">
+                <h3>📝Agregar Producto Rápido</h3>
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input id="nombreProducto" type="text" placeholder="Ej: Hamburguesa">
+                <label for="precioProducto">Precio:</label>
+                <input id="precioProducto" type="number">
+                <label for="stockProducto">Stock Inicial:</label>
+                <input id="stockProducto" type="number">
+                <label for="categoriaProducto">Categoría:</label>
+                <select name="categorias" id="categoriaProducto">
+                    <option value="">Seleccione una opción...</option>
+                    <option value="hamburguesas">Hamburguesas</option>
+                    <option value="pizzas">Pizzas</option>
+                    <option value="papasFritas">Papas Fritas</option>
+                    <option value="bebidas">Bebidas</option>
+                </select>
+                <label for="descripcionProducto">Descripción:</label>
+                <textarea name="descripciones" id="descripcionProducto" rows="4"
+                    cols="50">Ingresa los ingrediente...</textarea>
+                <button type="submit">Guardar Producto</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Panel de Administración - Food Store v1.0</p>
+    </footer>
+
+    <script type="module" src="home.ts"></script>
+    
+</body>
+
+</html>
